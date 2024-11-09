@@ -15,7 +15,7 @@ def main():
 
     # Frame skipping parameters
     frame_count = 0
-    process_every_n_frames = 5  # Adjust as needed
+    process_every_n_frames = 2  # Adjust as needed
 
     try:
         while True:
@@ -44,9 +44,9 @@ def main():
                     # Optional: Add notification logic here
 
             # Display the frame (optional)
-            cv2.imshow('Camera Feed', frame)
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                break
+            #cv2.imshow('Camera Feed', frame)
+            #if cv2.waitKey(1) & 0xFF == ord('q'):
+            #    break
 
     except Exception as e:
         print(f"An error occurred: {e}")
