@@ -12,8 +12,8 @@ class ObjectDetector:
 
     def detect(self, frame):
         # Convert frame to RGB
-        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        device = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         # Perform inference
-        results = self.model(image)
+        results = self.model(device)
         detections = results[0]
         return detections

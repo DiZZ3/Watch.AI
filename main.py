@@ -8,7 +8,7 @@ import time
 def main():
     # Initialize components
     stream = CameraStream(source=0)  # Adjust source if needed
-    detector = ObjectDetector('yolo11n.pt', device='cpu')  # Use appropriate model and device
+    detector = ObjectDetector('yolo11s.pt', device='cpu')  # Use appropriate model and device
 
     # Target objects to look for
     target_objects = ['person', 'cat', 'dog', 'bird', 'squirrel']
@@ -52,7 +52,7 @@ def main():
         print(f"An error occurred: {e}")
 
     finally:
-        stream.release()
+        stream.exit_requested()
         cv2.destroyAllWindows()
         print("Exiting...")
 
